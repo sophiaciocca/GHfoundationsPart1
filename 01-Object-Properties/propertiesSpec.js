@@ -1,25 +1,26 @@
-describe("Properties on Object Literal", function() {
+describe('Properties on Object Literal', function() {
   var object;
 
-  // beforeEach is a Jasmine helper that runs 
-  // the code inside the passed function before each test below
-  // It's helpful for not having to repeat yourself constantly
-  // in your test specs
+    // the `beforeEach` function is called once before each unit test spec
+    // "unit tests" or "tests" begin with the "it" function.      
   beforeEach(function() {
-
-    // for each test, create a new empty object
+    // Each test re-assigns an empty object literal to the object variable.
     object = {};
+    setPropsOnObj(object);   
 
-    // then run the setPropertiesOnObjLiteral function that you've written in properties.js
-    setPropertiesOnObjLiteral(object);
+    /* `setPropsOnObj is a function you need to define and create in `properties.js`.
+    The variable `object` is passed to the setPropsOnObj function and adds properties
+    on to the argument (which is an object literal).
+    */
   });
 
-  describe("setPropertiesOnObjLiteral", function() {
-    it("sets x to 7", function() {
+  describe('setPropsOnObj', function() {
+
+    it('sets x to 7', function() {
       expect(object.x).toEqual(7);
     });
 
-    it("sets y to 8 (and we can use a string to access it)", function() {
+    it('sets y to 8 (and we can use a string to access it)', function() {
       expect(object['y']).toEqual(8);
     });
 
@@ -28,31 +29,34 @@ describe("Properties on Object Literal", function() {
       expect(object['onePlus'](123)).toEqual(124);
     });
   });
+
 });
 
 
-// Now let's explore the idea of using Arrays instead of Objects.
-// One of the coolest things about JavaScript is that Arrays are just 
-// a specific type of Object that has more features.  Everything that you can do
-// with objects, you can also do with arrays.
-describe("Properties on an Array Object", function() {
+/* Let's explore the idea of using Arrays instead of Object Literals.
+One great feature of JavaScript is that Arrays are a specific
+type of Object that has special features.  Everything that you can do
+with objects, you can also do with arrays.
+*/
+
+describe('Properties on an Array Object', function() {
   var arrayObject;
 
   beforeEach(function() {
     arrayObject = [];
-    setPropertiesOnArrayObj(arrayObject);
+    setPropsOnArr(arrayObject);
   });
 
-  describe("setPropertiesOnArrayObj", function() {
-    it("sets the property `hello` to a function that returns the string `Hello!`", function() {
-      expect(arrayObject.hello()).toEqual("Hello!");
+  describe('setPropsOnArr', function() {
+    it('sets the property `hello` to a function that returns the string `Hello!`', function() {
+      expect(arrayObject.hello()).toEqual('Hello!');
     });
 
-    it("sets the property `full` to stack (and we can use a string to access it)", function() {
-      expect(arrayObject['full']).toEqual("stack");
+    it('sets the property `full` to stack (and we can use a string to access it)', function() {
+      expect(arrayObject['full']).toEqual('stack');
     });
 
-    it("accesses the zeroth index value in the array", function() {
+    it('accesses the zeroth index value in the array', function() {
       expect(arrayObject[0]).toEqual(5);
     });
 
@@ -62,46 +66,56 @@ describe("Properties on an Array Object", function() {
     });
 
   });
+
 });
 
 
-// It's the same with functions, they're also Objects.
-// 
-// This is an idea that we'll explore a lot more when we get to inheritance in the
-// Mammals exercise.
-describe("Properties on a Function Object", function() {
+/* Functions are also Objects! Functions and Arrays
+have the same features as Object Literals. You can add properties to them, 
+pass them to functions as arguments, and return them as values from functions.
+*/
+
+describe('Properties on a Function Object', function() {
   var functionObject;
 
-  beforeEach(function() {
+  beforeEach(function() {    
     functionObject = function() {
-      return "I am a function object, all functions are objects! Function can have their own properties too!";
+      return 'I am a function object, all functions are objects! Function can have their own properties too!';
     };
-    setPropertiesOnFunctionObj(functionObject);
+    
+    setPropsOnFunc(functionObject);
   });
 
-  describe("`functionObject` function", function() {
-    it("returns the proper string the `functionObject` function returns declared in the beforeEach Function above", function() {
-      expect(functionObject()).toEqual("I am a function object, all functions are objects! Function can have their own properties too!");
+  describe('`functionObject` function', function() {
+    it('returns the proper string the `functionObject` function returns declared in the beforeEach Function above', function() {
+      expect(functionObject()).toEqual('I am a function object, all functions are objects! Function can have their own properties too!');
     });
   });
 
-  describe("setPropertiesOnFunctionObj", function() {
-    it("sets year to 2015", function() {
-      expect(functionObject.year).toEqual(2015);
+  describe('setPropsOnFunc', function() {
+    it('sets year to 20?', function() {
+      expect(functionObject.year).toEqual('20?');
     });
 
-    it("sets `divideByTwo` to a function that accepts a number and returns the value divided by two ", function() {
+    it('sets `divideByTwo` to a function that accepts a number and returns the value divided by two ', function() {
       expect(functionObject.divideByTwo(6)).toEqual(3);
-    })
-
-    // Whenever you define a function in JavaScript, that "function object" also has a built-in property
-    // similar to `Array.length`.  This property is called `prototype` and it has some special behavior
-    // when used in conjunction with the `new` keyword.  We'll cover this later in _Mammals_
-    // 
-    // However, just like any other object, we can do whatever we want to this `prototype` object 
-    it("adds a property to the existing prototype object only on Function Objects", function() {
-      expect(functionObject.prototype.helloWorld()).toEqual("Hello World");
     });
+
+    /* Whenever you define a function in JavaScript, the "function object" has built-in properties
+    similar to `Array.length`.  A unique property on all function objects is the `prototype` property. 
+    The `prototype` property is only on function objects and has special behavior when used in conjunction 
+    with the `new` keyword.  We'll cover this later in future specs.  
+
+    It is important to just be aware
+    that functions have a unique property `prototype` that is different than the internal prototype (__proto__)
+    all objects have.
+  
+    However, just like any other object, we can do whatever we want to this `prototype` object    
+   */
+
+    it('adds a property to the existing prototype object only on Function Objects', function() {
+      expect(functionObject.prototype.helloWorld()).toEqual('Hello World');
+    }); 
   });
 
 });
