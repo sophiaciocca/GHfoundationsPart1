@@ -1,4 +1,4 @@
-describe("Loops", function() {
+describe("Looping", function() {
 
   // Let's repeat ourselves several times
   describe("The function `repeat`", function() {
@@ -49,30 +49,7 @@ describe("Loops", function() {
       expect(sum([1, 3, 5, 7, 9])).toEqual(25);
     });
   });
-});
 
-describe("The function `gridGenerator`", function(){
-  it("returns an empty string when input is 0", function(){
-    expect(gridGenerator(0)).toEqual("");
-  });
-  // all characters (even whitespaces) are values of the grid
-  it("creates a grid with 3 columns and rows when input is 3", function(){
-    //Remember, '\n' is the character for a new line.
-    expect(gridGenerator(3)).toEqual("# #\n # \n# #\n");
-    //This grid is a 3 x 3 and will look like:
-    // # #
-    //  #
-    // # #
-  });
-  it("creates a grid with 2 columns and rows when input is 2", function(){
-    expect(gridGenerator(2)).toEqual("# \n #\n")
-  });
-});
-
-describe("More looping over arrays", function() {x
-
-  // try to implement this join() function without using the built-in Array#join function
-  // join converts an array into a string, very useful!
   describe("The function `join`", function() {
     it("turns an empty array into an empty string", function() {
       expect(join([])).toEqual("");
@@ -119,6 +96,26 @@ describe("More looping over arrays", function() {x
     });
 
   });
+
+  describe("The function `gridGenerator`", function(){
+    it("returns an empty string when input is 0", function(){
+      expect(gridGenerator(0)).toEqual("");
+    });
+    // all characters (even whitespaces) are values of the grid
+    it("creates a grid with 3 columns and rows when input is 3", function(){
+      //Remember, '\n' is the character for a new line.
+      expect(gridGenerator(3)).toEqual("# #\n # \n# #\n");
+      //This grid is a 3 x 3 and will look like:
+      // # #
+      //  #
+      // # #
+    });
+    
+    it("creates a grid with 2 columns and rows when input is 2", function(){
+      expect(gridGenerator(2)).toEqual("# \n #\n")
+    });
+  });
+
 });
 
 
@@ -187,7 +184,6 @@ describe("looping over objects", function() {
       expect(Object.keys.calls.count()).toEqual(0);
     })
   });
-
 
   describe("the function `paramifyObjectKeys`", function(){
     //Most of these specs are the same as `paramify` above, but we expect you
