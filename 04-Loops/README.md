@@ -10,21 +10,29 @@ Looping is a powerful part of any programming language and allows you to repeat 
 - Conditional Expression (Evaluated each pass of the loop, when it evaluates to false the loop is exited)
 - Counter (the variable that changes each pass of the loop)
 
-A loop is a great way to run a block of code over and over until a condition is met.  The Loops TestSpec will also introduce you to looping over an object's keys and values using a `for in` loop. 
+A loop is a great way to run a block of code over and over until a condition is met.  The Loops TestSpec will also introduce you to looping over an object's keys and values using a `for in` loop. Remember, it's not good practice to use a `for in` loop to traverse arrays!
 
 The goal of this TestSpec is to become familiar and comfortable with looping, using nested loops, and looping over an object.
 
 <hr>
 
+###Overview Video
 
-###Lesson Video
+Review the following video to gain a better understanding of the TestSpec and core concepts.
 
-- Lesson & TestSpecs:  [Looping](https://www.youtube.com/watch?v=yJd7R-Ac4Uo)
+- Overview - [04-Loops]()
 
 <br>
+<hr>
+
+###Curriculum Videos
+
+ - [For Loops](https://learn.fullstackacademy.com/workshop/57a21d1d39616e0300f91dd6/content/57accf0ab95bba03002d5f80/text)
+ - [Traversing Objects](https://learn.fullstackacademy.com/workshop/57a21d1d39616e0300f91dd6/content/57accf04b95bba03002d5f7e/text)
+
 <hr>
 
 ###Additional Resources
 
 - Eloquent JavaScript [Control Flow](http://eloquentjavascript.net/02_program_structure.html#p_t55fBgZ9ww)
-- Codeschool [The Labyrinth of Loops](http://javascript-roadtrip-part2.codeschool.com/levels/1)  
+- Codeschool [The Labyrinth of Loops](http://javascript-roadtrip-part2.codeschool.com/levels/1)
