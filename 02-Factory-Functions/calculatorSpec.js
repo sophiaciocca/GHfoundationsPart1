@@ -52,7 +52,7 @@ describe("Create a Calculator", function() {
     expect(calculator.value()).toEqual(-2);
   });
 
-  it("can add and subtract", function() {
+  it("can add and subtract numbers", function() {
     calculator.add(3);
     calculator.subtract(2);
     expect(calculator.value()).toEqual(1);

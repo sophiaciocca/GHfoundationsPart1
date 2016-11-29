@@ -7,6 +7,7 @@ The Calculator TestSpec is very similar to 01-Properties.  The difference is ins
 
 This pattern is called creating a **Factory Function**, because your function is acting as a factory for making a certain pattern of object. 
 
+As you progress through the calculator specs, you may notice that to pass all the specs, methods may need to be able to reference the object that they belong to. This is a great introduction to the `this` keyword! Please watch the video series on the `this` keyword in JavaScript linked below.
 <hr>
 
 
