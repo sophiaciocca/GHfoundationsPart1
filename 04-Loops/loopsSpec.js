@@ -1,7 +1,7 @@
 describe("Loops", function() {
 
   // Let's repeat ourselves several times
-  xdescribe("The function `repeat`", function() {
+  describe("The function `repeat`", function() {
     it("returns an empty string with 0 repeats", function() {
       //From this spec, we learn that we are creating the function 'repeat'
       //which takes two arguments, a string and a number, and returns a string
@@ -31,7 +31,7 @@ describe("Loops", function() {
   });
 
   // Let's iterate over all the elements of an array using a loop
-  xdescribe("The function `sum`", function() {
+  describe("The function `sum`", function() {
     it("computes the sum of an empty array", function() {
       //Again, this statement tells us a lot about `sum`, the function we are creating
       expect(sum([])).toEqual(0);
@@ -51,7 +51,7 @@ describe("Loops", function() {
   });
 });
 
-xdescribe("The function `gridGenerator`", function(){
+describe("The function `gridGenerator`", function(){
   it("returns an empty string when input is 0", function(){
     expect(gridGenerator(0)).toEqual("");
   });
@@ -69,7 +69,7 @@ xdescribe("The function `gridGenerator`", function(){
   });
 });
 
-xdescribe("More looping over arrays", function() {x
+describe("More looping over arrays", function() {x
 
   // try to implement this join() function without using the built-in Array#join function
   // join converts an array into a string, very useful!
@@ -91,7 +91,7 @@ xdescribe("More looping over arrays", function() {x
     });
 
     // This test is to make sure you don't use "for (var i in a)" on an array
-    // Remember how we can add any type of key/value to an array object
+    // Remember how we can add any type of key/value pair to an array object
     // since it's just like a regular object? When we loop over this array, 
     // we only want the numeric indexed properties!
     it("ignores non-indexed properties set on the array object", function() {
@@ -107,7 +107,6 @@ xdescribe("More looping over arrays", function() {x
       expect(array.first()).toEqual('apple');
 
       expect(join(array)).toEqual("applebananacherry");
-      
     });
 
     // No cheatin' now 
@@ -191,7 +190,7 @@ describe("looping over objects", function() {
 
 
   describe("the function `paramifyObjectKeys`", function(){
-    //Most of these specs are the same as the function above, but we expect you
+    //Most of these specs are the same as `paramify` above, but we expect you
     //to use a different way of looping over your object...
     it("works on an empty object", function() {
       expect(paramifyObjectKeys({})).toEqual("");
@@ -248,7 +247,7 @@ describe("looping over objects", function() {
     })
   });
 
-  xdescribe('The function `renameFiles`', function(){
+  describe('The function `renameFiles`', function(){
 
     /*
 
