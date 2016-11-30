@@ -1,81 +1,105 @@
 // See http://en.wikipedia.org/wiki/Reverse_Polish_notation
-// 
-// constructor functions, new keyword, how it relates to this
-describe("Calculator using reverse polish notation", function() {
-  var rpnCalculator;
+
+describe('Calculator using reverse polish notation', function() {
+  var rpnCalculatorInstance;
 
   beforeEach(function() {
-    rpnCalculator = new RPNCalculator();
+    // How is the RPNCalculator function invoked? Is this a factory function or a ...?
+    rpnCalculatorInstance = new RPNCalculator();
   });
 
-  it("adds two numbers", function() {
-    rpnCalculator.push(2);
-    rpnCalculator.push(3);
-    rpnCalculator.plus();
-    expect(rpnCalculator.value()).toEqual(5);
+  it('adds two numbers', function() {
+    // Infix: 2 + 3
+    // Postfix: 2 3 +
+    rpnCalculatorInstance.push(2);
+    rpnCalculatorInstance.push(3);
+    rpnCalculatorInstance.plus();
+    expect(rpnCalculatorInstance.value()).toEqual(5);
   });
 
-  it("adds three numbers", function() {
-    rpnCalculator.push(2);
-    rpnCalculator.push(3);
-    rpnCalculator.push(4);
-    rpnCalculator.plus();
-    expect(rpnCalculator.value()).toEqual(7);
-    rpnCalculator.plus();
-    expect(rpnCalculator.value()).toEqual(9);
+  it('adds three numbers', function() {
+    // Infix: 2+3+4
+    // Postfix: 2 3 4 + +
+    rpnCalculatorInstance.push(2);
+    rpnCalculatorInstance.push(3);
+    rpnCalculatorInstance.push(4);
+    rpnCalculatorInstance.plus();
+    expect(rpnCalculatorInstance.value()).toEqual(7);
+    rpnCalculatorInstance.plus();
+    expect(rpnCalculatorInstance.value()).toEqual(9);
   });
 
-  it("adds and subtracts", function() {
-    rpnCalculator.push(2);
-    rpnCalculator.push(3);
-    rpnCalculator.push(4);
-    rpnCalculator.minus();
-    expect(rpnCalculator.value()).toEqual(-1);
-    rpnCalculator.plus();
-    expect(rpnCalculator.value()).toEqual(1);
+  it('subtracts two numbers', function() {
+    // Infix: 2-3
+    // Postfix: 2 3 -
+    rpnCalculatorInstance.push(2);
+    rpnCalculatorInstance.push(3);
+    rpnCalculatorInstance.minus();
+    expect(rpnCalculatorInstance.value()).toEqual(-1)
+  })
+
+  it('adds and subtracts', function() {
+    // Infix: 2 + 3 - 4
+    // Postfix: 2 3 4 - +
+    rpnCalculatorInstance.push(2);
+    rpnCalculatorInstance.push(3);
+    rpnCalculatorInstance.push(4);
+    rpnCalculatorInstance.minus();
+    expect(rpnCalculatorInstance.value()).toEqual(-1);
+    rpnCalculatorInstance.plus();
+    expect(rpnCalculatorInstance.value()).toEqual(1);
   });
 
-  it("multiplies and divides", function() {
-    rpnCalculator.push(2);
-    rpnCalculator.push(3);
-    rpnCalculator.push(4);
-    rpnCalculator.divide();
-    expect(rpnCalculator.value()).toEqual(0.75);
-    rpnCalculator.times();
-    expect(rpnCalculator.value()).toEqual(1.5);
+  it('multiplies and divides', function() {
+    // Infix: 2 * 3 / 4
+    // Postfix: 2 3 4 / *
+    rpnCalculatorInstance.push(2);
+    rpnCalculatorInstance.push(3);
+    rpnCalculatorInstance.push(4);
+    rpnCalculatorInstance.divide();
+    expect(rpnCalculatorInstance.value()).toEqual(0.75);
+    rpnCalculatorInstance.times();
+    expect(rpnCalculatorInstance.value()).toEqual(1.5);
   });
+
+  /* The following test spec tests if a custom exception is thrown.  This will help a user know
+  what is wrong with their calculator when their calculator is empty.  There are a few
+  ways of throwing an exception, review the `throw statement` - https://mzl.la/1CkHpEM and create
+  an exception.
+  */
+
 
   it("fails informatively when there's not enough values stashed away", function() {
     expect(function() {
-      rpnCalculator.plus();
-    }).toThrow("rpnCalculator is empty");
+      rpnCalculatorInstance.plus();
+    }).toThrow('rpnCalculatorInstance is empty');
 
     expect(function() {
-      rpnCalculator.minus();
-    }).toThrow("rpnCalculator is empty");
+      rpnCalculatorInstance.minus();
+    }).toThrow('rpnCalculatorInstance is empty');
 
     expect(function() {
-      rpnCalculator.times();
-    }).toThrow("rpnCalculator is empty");
+      rpnCalculatorInstance.times();
+    }).toThrow('rpnCalculatorInstance is empty');
 
     expect(function() {
-      rpnCalculator.divide();
-    }).toThrow("rpnCalculator is empty");
+      rpnCalculatorInstance.divide();
+    }).toThrow('rpnCalculatorInstance is empty');
   });
 
-  it("All methods should be on the RPNCalculator.prototype", function() {
-    expect(typeof RPNCalculator.prototype.plus).toEqual("function");
-    expect(typeof RPNCalculator.prototype.minus).toEqual("function");
-    expect(typeof RPNCalculator.prototype.divide).toEqual("function");
-    expect(typeof RPNCalculator.prototype.value).toEqual("function");
+  it('All methods should be on the RPNCalculator.prototype', function() {
+    expect(typeof RPNCalculator.prototype.plus).toEqual('function');
+    expect(typeof RPNCalculator.prototype.minus).toEqual('function');
+    expect(typeof RPNCalculator.prototype.divide).toEqual('function');
+    expect(typeof RPNCalculator.prototype.value).toEqual('function');
   });
 
-  // Here we're using the `instanceof` keyword in JS so see if `rpnCalculator` is 
-  // an "instance" of capital RPNCalculator.  `instanceof` tests to see if 
-  // an 'internal prototype' (`__proto__`) in the chain of `rpnCalculator` matches the `RPNCalculator.prototype` object.
-  it("the rpnCalculator object should be an instance of the RPNCalculator Constructor", function() {
-    expect(rpnCalculator instanceof RPNCalculator).toEqual(true);
-  });
+  /* This unit test uses the `instanceof` operator. `instanceof` checks if an object has
+  prototype property (.prototype) of a constructor.  Here is a link to the documentation
+  for `instanceof`: https://mzl.la/1dqYtqW */
 
+  it('the rpnCalculatorInstance object should be an instance of the RPNCalculator Constructor', function() {
+    expect(rpnCalculatorInstance instanceof RPNCalculator).toEqual(true);
+  });
 
 });
