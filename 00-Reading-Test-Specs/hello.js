@@ -5,3 +5,7 @@ function hello(name){
 		return "Hello, " + name + "!";
 	}
 }
+
+function add(number, num){
+	return number + num;
+}
