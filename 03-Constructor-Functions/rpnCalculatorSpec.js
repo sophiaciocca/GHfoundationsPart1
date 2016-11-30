@@ -4,6 +4,7 @@ describe('Calculator using reverse polish notation', function() {
   var rpnCalculator;
 
   beforeEach(function() {
+    // How is the RPNCalculator function invoked? Is this a factory function or a ...?
     rpnCalculator = new RPNCalculator();
   });
 
