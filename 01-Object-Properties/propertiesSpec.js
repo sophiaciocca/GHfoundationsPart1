@@ -14,7 +14,7 @@ describe('Properties on Object Literal', function() {
     */
   });
 
-  describe('setPropsOnObj', function() {
+  describe('the function `setPropsOnObj`', function() {
 
     it('sets x to 7', function() {
       expect(object.x).toEqual(7);
@@ -47,7 +47,7 @@ describe('Properties on an Array Object', function() {
     setPropsOnArr(arrayObject);
   });
 
-  describe('setPropsOnArr', function() {
+  describe('the function `setPropsOnArr`', function() {
     it('sets the property `hello` to a function that returns the string `Hello!`', function() {
       expect(arrayObject.hello()).toEqual('Hello!');
     });
@@ -86,13 +86,13 @@ describe('Properties on a Function Object', function() {
     setPropsOnFunc(functionObject);
   });
 
-  describe('`functionObject` function', function() {
+  describe('the function `functionObject`', function() {
     it('returns the proper string the `functionObject` function returns declared in the beforeEach Function above', function() {
       expect(functionObject()).toEqual('I am a function object, all functions are objects! Function can have their own properties too!');
     });
   });
 
-  describe('setPropsOnFunc', function() {
+  describe('the function `setPropsOnFunc`', function() {
     it('sets year to 20?', function() {
       expect(functionObject.year).toEqual('20?');
     });

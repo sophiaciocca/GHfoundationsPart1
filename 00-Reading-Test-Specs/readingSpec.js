@@ -1,4 +1,4 @@
-describe("Hello", function() {
+describe("the function `hello`", function() {
   it("says hello", function() {
     expect(hello()).toEqual(FILL_ME_IN);
   });
@@ -8,7 +8,7 @@ describe("Hello", function() {
   });
 });
 
-describe('Add', function(){
+describe('the function `add`', function(){
 
   var returnValue = 0;
 
