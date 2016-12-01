@@ -12,7 +12,7 @@ Often, you will hear that `Arrays` and `Functions` are special object types.  Th
 
 ###Section Overview
 
-- [Post summary video here]()
+- [01-Object-Properties Overview Video](https://youtu.be/kSSjUWQjjPQ)
 
 ####Lesson Curriculum
 
