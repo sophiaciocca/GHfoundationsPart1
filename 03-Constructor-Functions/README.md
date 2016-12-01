@@ -8,7 +8,7 @@ In 02-Factory-Functions you created a function that returned a Calculator Object
 
 The following Test Specs will guide and help you create an RPN Calculator which stands for (Reverse Polish Notation).  RPN Calculators are based on `POSTFIX` arithmetic notation.
 `POSTFIX` aka "postorder" notation positions operands (numbers) before their operators, (EX: `4 5 7 * +`) `INFIX` aka "inorder" notation is commonly used. `INFIX` notation positions
-operands and operators between each other, (EX: ` 4 + 5 * 7). One of the main advantages of `POSTFIX` notation is the ease of readability.  `POSTFIX` expressions are read from left
+operands and operators between each other, (EX: ` 4 + 5 * 7`). One of the main advantages of `POSTFIX` notation is the ease of readability.  `POSTFIX` expressions are read from left
 to right, there aren' parenthesis and the concept of operator precedence (order of operations, PEMDAS).  Here is a [link that will demonstrate how to evaluate a `POSTFIX` expression](http://scriptasylum.com/tutorials/infix_postfix/algorithms/postfix-evaluation/)
 or watch the Overview video for a walkthrough.
  
@@ -39,7 +39,10 @@ A B -
 
 ###Section Overview
 
-- [Summary Video Here]()
+- [03-Constructor-Functions Overview](https://youtu.be/bDCLUIQx2qU)
+- [What is an RPN Calculator?](https://youtu.be/bDCLUIQx2qU)
+- [Test Spec Overview](https://youtu.be/bDCLUIQx2qU?t=7m40s)
+- [Constructor Function Mini-Lesson](https://youtu.be/bDCLUIQx2qU?t=12m25s)
 
 ###Curriculum Videos
 
