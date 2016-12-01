@@ -13,7 +13,7 @@ As you progress through the calculator specs, you may notice that to pass all th
 
 ###Section Overview
 
-- [02-Factory Functions summary video here]()
+- [02-Factory Functions](https://youtu.be/4F6ZUK0nzeE)
 
 ###Curriculum Videos
 
