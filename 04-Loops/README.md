@@ -16,21 +16,14 @@ The goal of this TestSpec is to become familiar and comfortable with looping, us
 
 <hr>
 
-###Overview Video
+###Section Overview
 
-Review the following video to gain a better understanding of the TestSpec and core concepts.
-
-- Overview - [04-Loops]()
-
-<br>
-<hr>
+- [04-Loops]()
 
 ###Curriculum Videos
 
  - [For Loops](https://learn.fullstackacademy.com/workshop/57a21d1d39616e0300f91dd6/content/57accf0ab95bba03002d5f80/text)
  - [Traversing Objects](https://learn.fullstackacademy.com/workshop/57a21d1d39616e0300f91dd6/content/57accf04b95bba03002d5f7e/text)
-
-<hr>
 
 ###Additional Resources
 

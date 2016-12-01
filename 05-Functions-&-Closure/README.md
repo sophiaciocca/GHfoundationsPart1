@@ -11,19 +11,17 @@ As some of the previous TestSpecs demonstrated, Functions are just Objects.  The
 - [Closure](http://javascript-roadtrip-part3.codeschool.com/levels/2)
 - Call Stack
 
-
-
 <hr>
 
+###Section Overview
 
-###Lesson Video
+- [05 Functions & Closure]()
 
-- Lesson: [Functions - Higher Order Function & Arguments Variable](https://www.youtube.com/watch?v=SNBn8Y5kTeY)
-- Lesson: [Scope, Closure, Call Stack](https://www.youtube.com/watch?v=gLCNZHB1v5g)
-
-<br>
-<hr>
-
+###Curriculum Videos
+- [Dive into Functions](https://learn.fullstackacademy.com/workshop/57a21d1d39616e0300f91dd6/content/57accf4ff3d6370300b481b4/text)
+- [Function Arguments Keyword](https://learn.fullstackacademy.com/workshop/57a21d1d39616e0300f91dd6/content/57accf57f3d6370300b481b6/text)
+- [Higher Order Functions](https://learn.fullstackacademy.com/workshop/57a21d1d39616e0300f91dd6/content/57accf5ef3d6370300b481b8/text)
+- Put Closure Videos Here
 
 ###Additional Resources:
 

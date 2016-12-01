@@ -13,8 +13,7 @@ to right, there aren' parenthesis and the concept of operator precedence (order 
 or watch the Overview video for a walkthrough.
  
 
-- 
- for example:
+For example:
 
 ```
 INFIX:
@@ -38,18 +37,14 @@ A B -
 
 <hr>
 
+###Section Overview
 
-###Overview Video
+- [Summary Video Here]()
 
+###Curriculum Videos
 
-
-<br>
-<hr>
-
-- TestSpec - ['throw' Errors and TestSpec Overview](http://www.youtube.com/watch?v=7_Auxy_mRfM)]
-
-
-<hr>
+- [Rule 4: Binding 'this' using the new keyword](https://learn.fullstackacademy.com/workshop/57a21d1d39616e0300f91dd6/content/57a379cd196d170300fd6373/text)
+- [Constructor videos here]
 
 ###Additional Resources
 

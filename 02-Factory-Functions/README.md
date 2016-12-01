@@ -8,23 +8,20 @@ The Calculator TestSpec is very similar to 01-Properties.  The difference is ins
 This pattern is called creating a **Factory Function**, because your function is acting as a factory for making a certain pattern of object. 
 
 As you progress through the calculator specs, you may notice that to pass all the specs, methods may need to be able to reference the object that they belong to. This is a great introduction to the `this` keyword! Please watch the video series on the `this` keyword in JavaScript linked below.
+
 <hr>
 
+###Section Overview
 
-###Overview Video
-
-Review the following video to gain a better understanding of the TestSpec and core concepts.
-
-- Overview - [02-Factory Functions]()
-
-<br>
-<hr>
+- [02-Factory Functions summary video here]()
 
 ###Curriculum Videos
 
-- [What is 'this' series]()
-
-<hr>
+- [What is 'this'](https://learn.fullstackacademy.com/workshop/57a21d1d39616e0300f91dd6/content/57a4a79730dc9b03004ac267/text)
+- [Misconceptions of 'this'](https://learn.fullstackacademy.com/workshop/57a21d1d39616e0300f91dd6/content/57a49bd330dc9b03004abf79/text)
+- [Call site and execution context](https://learn.fullstackacademy.com/workshop/57a21d1d39616e0300f91dd6/content/57a4b04cfda8d1030029dc95/text)
+- [Rule 1: Default Binding](https://learn.fullstackacademy.com/workshop/57a21d1d39616e0300f91dd6/content/57a3799bb664a60300f626e4/text)
+- [Rule 2: Implicit Binding](https://learn.fullstackacademy.com/workshop/57a21d1d39616e0300f91dd6/content/57a3799bb664a60300f626e4/text)
 
 ###Additional Resources
 
