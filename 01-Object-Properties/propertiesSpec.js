@@ -94,7 +94,7 @@ describe('Properties on a Function Object', function() {
 
   describe('the function `setPropsOnFunc`', function() {
     it('sets year to 20?', function() {
-      expect(functionObject.year).toEqual('20?');
+      expect(functionObject.year).toEqual('20??');
     });
 
     it('sets `divideByTwo` to a function that accepts a number and returns the value divided by two ', function() {
