@@ -130,6 +130,8 @@ describe('Shared contexts', function() {
 
 });
 
+/* NOTE: Do not use ES6 "let" keyword */
+
 describe('secret-guest-list', function(){
   describe('guestListFns', function() {
     var guestNameFunctions,
