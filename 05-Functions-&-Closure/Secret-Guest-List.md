@@ -45,3 +45,5 @@ var guestList = generateGuestList(guestListFns, 512);
 // guestList = ["Gabriel", "Ben", "Dan", "Griffin", "Cang", "Kate", "Chris"];
 
 ```
+
+NOTE: YOU MAY NOT USE THE ES6 KEYWORD 'LET' IN THIS PROBLEM. FOR FULL CREDIT, YOU MUST COMPLETE THIS PROBLEM USING ONLY ES5
